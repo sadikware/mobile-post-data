@@ -38,9 +38,16 @@ post_data = [
 
 # Your Code Start from here
 
+for post in post_data:
 
+    # print(post)
+    # print(post['title'])
 
+    slug = post['title'].strip().lower().replace(' ', '-')
+    # print(slug)
+    post.update({'slug': slug})
+    # print(post_data)
 
-# Your code ends here
+    # Your code ends here
 
-print(post_data[4])
+    print(post_data[4])
